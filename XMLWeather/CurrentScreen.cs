@@ -22,10 +22,17 @@ namespace XMLWeather
             double currentTemp = Convert.ToDouble(Form1.days[0].currentTemp);
             double temp = Math.Round(currentTemp);
 
+            double maxTemp = Convert.ToDouble(Form1.days[0].tempHigh);
+            double max = Math.Round(maxTemp);
+
+            double minTemp = Convert.ToDouble(Form1.days[0].tempLow);
+            double min = Math.Round(minTemp);
+
             cityOutput.Text = Form1.days[0].location;
             tempLabel.Text = $"{temp.ToString()}°";
-            minOutput.Text = Form1.days[0].tempLow;
-            maxOutput.Text = Form1.days[0].tempHigh;
+            minOutput.Text = $"{min.ToString()}°";
+            maxOutput.Text = $"{max.ToString()}°";
+            contitionLabel.Text = Form1.days[0].condition;
         }
 
         private void forecastLabel_Click(object sender, EventArgs e)

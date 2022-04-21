@@ -47,6 +47,7 @@ namespace XMLWeather
                 searchBox.Clear();
                 Refresh();
                 Thread.Sleep(2000);
+                errorLabel.Visible = false;
             }
         }
     }

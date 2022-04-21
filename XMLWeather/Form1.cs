@@ -14,7 +14,7 @@ namespace XMLWeather
     public partial class Form1 : Form
     {
         public static List<Day> days = new List<Day>();
-        public static string location = "Stratford";
+        public static string location = "Stratford, CA";
 
 
         public Form1()
@@ -43,7 +43,7 @@ namespace XMLWeather
                 newDay.date = reader.GetAttribute("day");
 
                 reader.ReadToFollowing("symbol");
-                newDay.condition = reader.GetAttribute("name");
+                newDay.condition = reader.GetAttribute("var");
 
                 reader.ReadToFollowing("temperature");
                 newDay.tempLow = reader.GetAttribute("min");
@@ -60,7 +60,7 @@ namespace XMLWeather
         public static void ExtractCurrent()
         {
             // current info is not included in forecast file so we need to use this file to get it
-            XmlReader reader = XmlReader.Create($"http://api.openweathermap.org/data/2.5/weather?q={location},CA&mode=xml&units=metric&appid=3f2e224b815c0ed45524322e145149f0");
+            XmlReader reader = XmlReader.Create($"http://api.openweathermap.org/data/2.5/weather?q={location}&mode=xml&units=metric&appid=3f2e224b815c0ed45524322e145149f0");
 
             reader.ReadToFollowing("city");
             days[0].location = reader.GetAttribute("name");
@@ -69,7 +69,14 @@ namespace XMLWeather
             days[0].currentTemp = reader.GetAttribute("value");
 
             reader.ReadToFollowing("weather");
-            days[0].condition = reader.GetAttribute("value");
+            days[0].condition = reader.GetAttribute("icon");
         }
+
+        public static void GetConditions()
+        {
+
+        }
+
+
     }
 }
