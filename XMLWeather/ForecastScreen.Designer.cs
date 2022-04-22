@@ -50,6 +50,16 @@
             this.min4 = new System.Windows.Forms.Label();
             this.max5 = new System.Windows.Forms.Label();
             this.min5 = new System.Windows.Forms.Label();
+            this.icon1 = new System.Windows.Forms.PictureBox();
+            this.icon2 = new System.Windows.Forms.PictureBox();
+            this.icon3 = new System.Windows.Forms.PictureBox();
+            this.icon4 = new System.Windows.Forms.PictureBox();
+            this.icon5 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.icon1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon5)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -85,12 +95,13 @@
             // 
             // date1
             // 
-            this.date1.BackColor = System.Drawing.Color.Transparent;
+            this.date1.AutoSize = true;
+            this.date1.BackColor = System.Drawing.Color.Black;
             this.date1.ForeColor = System.Drawing.Color.White;
             this.date1.Location = new System.Drawing.Point(17, 15);
             this.date1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(166, 41);
+            this.date1.Size = new System.Drawing.Size(44, 20);
             this.date1.TabIndex = 64;
             this.date1.Text = "Date";
             // 
@@ -261,11 +272,71 @@
             this.min5.Size = new System.Drawing.Size(33, 20);
             this.min5.TabIndex = 84;
             // 
+            // icon1
+            // 
+            this.icon1.BackColor = System.Drawing.Color.Transparent;
+            this.icon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.icon1.Location = new System.Drawing.Point(160, 26);
+            this.icon1.Name = "icon1";
+            this.icon1.Size = new System.Drawing.Size(62, 58);
+            this.icon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.icon1.TabIndex = 85;
+            this.icon1.TabStop = false;
+            // 
+            // icon2
+            // 
+            this.icon2.BackColor = System.Drawing.Color.Transparent;
+            this.icon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.icon2.Location = new System.Drawing.Point(160, 115);
+            this.icon2.Name = "icon2";
+            this.icon2.Size = new System.Drawing.Size(62, 58);
+            this.icon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.icon2.TabIndex = 86;
+            this.icon2.TabStop = false;
+            // 
+            // icon3
+            // 
+            this.icon3.BackColor = System.Drawing.Color.Transparent;
+            this.icon3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.icon3.Location = new System.Drawing.Point(160, 210);
+            this.icon3.Name = "icon3";
+            this.icon3.Size = new System.Drawing.Size(62, 58);
+            this.icon3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.icon3.TabIndex = 87;
+            this.icon3.TabStop = false;
+            // 
+            // icon4
+            // 
+            this.icon4.BackColor = System.Drawing.Color.Transparent;
+            this.icon4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.icon4.Location = new System.Drawing.Point(160, 307);
+            this.icon4.Name = "icon4";
+            this.icon4.Size = new System.Drawing.Size(62, 58);
+            this.icon4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.icon4.TabIndex = 88;
+            this.icon4.TabStop = false;
+            // 
+            // icon5
+            // 
+            this.icon5.BackColor = System.Drawing.Color.Transparent;
+            this.icon5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.icon5.Location = new System.Drawing.Point(160, 400);
+            this.icon5.Name = "icon5";
+            this.icon5.Size = new System.Drawing.Size(62, 58);
+            this.icon5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.icon5.TabIndex = 89;
+            this.icon5.TabStop = false;
+            // 
             // ForecastScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.icon5);
+            this.Controls.Add(this.icon4);
+            this.Controls.Add(this.icon3);
+            this.Controls.Add(this.icon2);
+            this.Controls.Add(this.icon1);
             this.Controls.Add(this.min5);
             this.Controls.Add(this.max5);
             this.Controls.Add(this.min4);
@@ -291,6 +362,11 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ForecastScreen";
             this.Size = new System.Drawing.Size(375, 615);
+            ((System.ComponentModel.ISupportInitialize)(this.icon1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icon5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,5 +395,10 @@
         private System.Windows.Forms.Label min4;
         private System.Windows.Forms.Label max5;
         private System.Windows.Forms.Label min5;
+        private System.Windows.Forms.PictureBox icon1;
+        private System.Windows.Forms.PictureBox icon2;
+        private System.Windows.Forms.PictureBox icon3;
+        private System.Windows.Forms.PictureBox icon4;
+        private System.Windows.Forms.PictureBox icon5;
     }
 }
