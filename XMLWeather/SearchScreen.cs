@@ -34,6 +34,7 @@ namespace XMLWeather
 
                 Form1.ExtractForecast();
                 Form1.ExtractCurrent();
+                Form1.GetConditions();
 
                 Form f = this.FindForm();
                 f.Controls.Remove(this);

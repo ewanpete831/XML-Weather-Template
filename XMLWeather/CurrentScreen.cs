@@ -33,6 +33,8 @@ namespace XMLWeather
             minOutput.Text = $"{min.ToString()}°";
             maxOutput.Text = $"{max.ToString()}°";
             contitionLabel.Text = Form1.days[0].condition;
+
+            weatherIconBox.ImageLocation = $"http://openweathermap.org/img/wn/{Form1.days[0].icon}@2x.png";
         }
 
         private void forecastLabel_Click(object sender, EventArgs e)
