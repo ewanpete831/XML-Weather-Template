@@ -57,7 +57,7 @@
             // maxOutput
             // 
             this.maxOutput.BackColor = System.Drawing.Color.Transparent;
-            this.maxOutput.Font = new System.Drawing.Font("Berlin Sans FB Demi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maxOutput.Font = new System.Drawing.Font("Berlin Sans FB Demi", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxOutput.ForeColor = System.Drawing.Color.White;
             this.maxOutput.Location = new System.Drawing.Point(306, 102);
             this.maxOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -69,7 +69,7 @@
             // minOutput
             // 
             this.minOutput.BackColor = System.Drawing.Color.Transparent;
-            this.minOutput.Font = new System.Drawing.Font("Berlin Sans FB Demi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minOutput.Font = new System.Drawing.Font("Berlin Sans FB Demi", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minOutput.ForeColor = System.Drawing.Color.White;
             this.minOutput.Location = new System.Drawing.Point(308, 145);
             this.minOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -90,6 +90,7 @@
             // 
             // tempLabel
             // 
+            this.tempLabel.BackColor = System.Drawing.Color.Transparent;
             this.tempLabel.Font = new System.Drawing.Font("Berlin Sans FB Demi", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tempLabel.ForeColor = System.Drawing.Color.White;
             this.tempLabel.Location = new System.Drawing.Point(16, 83);
@@ -103,7 +104,7 @@
             // forecastLabel
             // 
             this.forecastLabel.BackColor = System.Drawing.Color.Transparent;
-            this.forecastLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forecastLabel.Font = new System.Drawing.Font("Berlin Sans FB Demi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forecastLabel.ForeColor = System.Drawing.Color.White;
             this.forecastLabel.Location = new System.Drawing.Point(14, 542);
             this.forecastLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -152,11 +153,12 @@
             // 
             // weatherIconBox
             // 
-            this.weatherIconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.weatherIconBox.Location = new System.Drawing.Point(110, 363);
+            this.weatherIconBox.BackColor = System.Drawing.Color.Transparent;
+            this.weatherIconBox.Location = new System.Drawing.Point(92, 338);
             this.weatherIconBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.weatherIconBox.Name = "weatherIconBox";
-            this.weatherIconBox.Size = new System.Drawing.Size(152, 145);
+            this.weatherIconBox.Size = new System.Drawing.Size(198, 194);
+            this.weatherIconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.weatherIconBox.TabIndex = 46;
             this.weatherIconBox.TabStop = false;
             // 
@@ -165,6 +167,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::XMLWeather.Properties.Resources.snow;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.weatherIconBox);
             this.Controls.Add(this.contitionLabel);
             this.Controls.Add(this.label1);

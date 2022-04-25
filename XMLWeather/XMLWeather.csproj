@@ -109,10 +109,22 @@
     <None Include="Resources\Rain3.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sunny.png" />
+    <None Include="Resources\cloudybg.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Cloudy.png" />
+    <None Include="Resources\cloudBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloudBackground2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClearBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RainBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SnowBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

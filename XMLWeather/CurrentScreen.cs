@@ -35,6 +35,8 @@ namespace XMLWeather
             contitionLabel.Text = Form1.days[0].condition;
 
             weatherIconBox.ImageLocation = $"http://openweathermap.org/img/wn/{Form1.days[0].icon}@2x.png";
+
+            BackgroundImage = Form1.days[0].bgImage;
         }
 
         private void forecastLabel_Click(object sender, EventArgs e)

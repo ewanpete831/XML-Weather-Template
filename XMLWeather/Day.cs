@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 
 namespace XMLWeather
 {
@@ -9,6 +10,8 @@ namespace XMLWeather
     {
         public string date, currentTemp, currentTime, condition, location, tempHigh, tempLow, 
             windSpeed, windDirection, precipitation, visibility, icon;
+
+        public Image bgImage;
 
         public Day()
         {

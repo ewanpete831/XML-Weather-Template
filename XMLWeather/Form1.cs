@@ -80,30 +80,37 @@ namespace XMLWeather
                 if (d.icon.Contains("01"))
                 {
                     d.condition = "Clear Sky";
+                    d.bgImage = Properties.Resources.clear;
                 }
                 else if (d.icon.Contains("02"))
                 {
                     d.condition = "Few Clouds";
+                    d.bgImage = Properties.Resources.cloud;
                 }
                 else if (d.icon.Contains("03") || d.icon.Contains("04"))
                 {
                     d.condition = "Cloudy";
+                    d.bgImage = Properties.Resources.cloud;
                 }
                 else if (d.icon.Contains("09") || d.icon.Contains("10"))
                 {
                     d.condition = "Rain";
+                    d.bgImage = Properties.Resources.rain;
                 }
                 else if (d.icon.Contains("11"))
                 {
                     d.condition = "Thunderstorm";
+                    d.bgImage = Properties.Resources.rain;
                 }
                 else if (d.icon.Contains("13"))
                 {
                     d.condition = "Snow";
+                    d.bgImage = Properties.Resources.snow;
                 }
                 else if (d.icon.Contains("50"))
                 {
                     d.condition = "Mist";
+                    d.bgImage = Properties.Resources.cloud;
                 }
             }
         }
