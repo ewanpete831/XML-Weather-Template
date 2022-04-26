@@ -30,75 +30,73 @@ namespace XMLWeather
         private void InitializeComponent()
         {
             this.searchBox = new System.Windows.Forms.TextBox();
-            this.searchLabel = new System.Windows.Forms.Label();
-            this.returnButton = new System.Windows.Forms.Button();
-            this.searchButton = new System.Windows.Forms.Button();
             this.errorLabel = new System.Windows.Forms.Label();
+            this.searchLabel = new System.Windows.Forms.Label();
+            this.returnLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(168, 38);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.searchBox.Font = new System.Drawing.Font("Berlin Sans FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBox.Location = new System.Drawing.Point(32, 14);
+            this.searchBox.Multiline = true;
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(148, 26);
+            this.searchBox.Size = new System.Drawing.Size(182, 40);
             this.searchBox.TabIndex = 0;
-            // 
-            // searchLabel
-            // 
-            this.searchLabel.AutoSize = true;
-            this.searchLabel.Location = new System.Drawing.Point(42, 43);
-            this.searchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(60, 20);
-            this.searchLabel.TabIndex = 1;
-            this.searchLabel.Text = "Search";
-            // 
-            // returnButton
-            // 
-            this.returnButton.Location = new System.Drawing.Point(219, 546);
-            this.returnButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.returnButton.Name = "returnButton";
-            this.returnButton.Size = new System.Drawing.Size(112, 35);
-            this.returnButton.TabIndex = 2;
-            this.returnButton.Text = "Return";
-            this.returnButton.UseVisualStyleBackColor = true;
-            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
-            // 
-            // searchButton
-            // 
-            this.searchButton.Location = new System.Drawing.Point(180, 131);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(124, 36);
-            this.searchButton.TabIndex = 3;
-            this.searchButton.Text = "search";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            this.searchBox.Text = "Enter City Here";
+            this.searchBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.searchBox.Click += new System.EventHandler(this.searchBox_Click);
             // 
             // errorLabel
             // 
             this.errorLabel.AutoSize = true;
+            this.errorLabel.BackColor = System.Drawing.Color.Transparent;
             this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorLabel.Location = new System.Drawing.Point(-3, 281);
-            this.errorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.errorLabel.ForeColor = System.Drawing.Color.White;
+            this.errorLabel.Location = new System.Drawing.Point(-2, 183);
             this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(378, 37);
+            this.errorLabel.Size = new System.Drawing.Size(260, 26);
             this.errorLabel.TabIndex = 4;
             this.errorLabel.Text = "Please Enter a Valid City!";
             this.errorLabel.Visible = false;
             // 
+            // searchLabel
+            // 
+            this.searchLabel.AutoSize = true;
+            this.searchLabel.BackColor = System.Drawing.Color.Transparent;
+            this.searchLabel.Font = new System.Drawing.Font("Berlin Sans FB Demi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchLabel.ForeColor = System.Drawing.Color.White;
+            this.searchLabel.Location = new System.Drawing.Point(71, 57);
+            this.searchLabel.Name = "searchLabel";
+            this.searchLabel.Size = new System.Drawing.Size(108, 37);
+            this.searchLabel.TabIndex = 99;
+            this.searchLabel.Text = "Search";
+            this.searchLabel.Click += new System.EventHandler(this.searchLabel_Click);
+            // 
+            // returnLabel
+            // 
+            this.returnLabel.AutoSize = true;
+            this.returnLabel.BackColor = System.Drawing.Color.Transparent;
+            this.returnLabel.Font = new System.Drawing.Font("Berlin Sans FB Demi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnLabel.ForeColor = System.Drawing.Color.White;
+            this.returnLabel.Location = new System.Drawing.Point(132, 343);
+            this.returnLabel.Name = "returnLabel";
+            this.returnLabel.Size = new System.Drawing.Size(115, 37);
+            this.returnLabel.TabIndex = 100;
+            this.returnLabel.Text = "Return";
+            this.returnLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
             // SearchScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.errorLabel);
-            this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.returnButton);
+            this.BackgroundImage = global::XMLWeather.Properties.Resources.cloud;
+            this.Controls.Add(this.returnLabel);
             this.Controls.Add(this.searchLabel);
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.searchBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SearchScreen";
-            this.Size = new System.Drawing.Size(375, 615);
+            this.Size = new System.Drawing.Size(250, 400);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,9 +105,8 @@ namespace XMLWeather
         #endregion
 
         private System.Windows.Forms.TextBox searchBox;
-        private System.Windows.Forms.Label searchLabel;
-        private System.Windows.Forms.Button returnButton;
-        private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.Label searchLabel;
+        private System.Windows.Forms.Label returnLabel;
     }
 }

@@ -76,7 +76,7 @@ namespace XMLWeather
             f.Controls.Add(cs);
         }
 
-        private void searchButton_Click(object sender, EventArgs e)
+        private void searchLabel_Click(object sender, EventArgs e)
         {
             Form f = this.FindForm();
             f.Controls.Remove(this);

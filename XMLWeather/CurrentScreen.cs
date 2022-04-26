@@ -33,6 +33,7 @@ namespace XMLWeather
             minOutput.Text = $"{min.ToString()}°";
             maxOutput.Text = $"{max.ToString()}°";
             contitionLabel.Text = Form1.days[0].condition;
+            dateLabel.Text = DateTime.Now.DayOfWeek.ToString();
 
             weatherIconBox.ImageLocation = $"http://openweathermap.org/img/wn/{Form1.days[0].icon}@2x.png";
 
@@ -48,7 +49,7 @@ namespace XMLWeather
             f.Controls.Add(fs);
         }
 
-        private void searchButton_Click(object sender, EventArgs e)
+        private void searchLabel_Click(object sender, EventArgs e)
         {
             Form f = this.FindForm();
             f.Controls.Remove(this);
