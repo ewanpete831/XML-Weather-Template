@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
+//day class
 namespace XMLWeather
 {
     public class Day

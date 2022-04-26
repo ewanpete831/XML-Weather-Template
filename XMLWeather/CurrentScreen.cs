@@ -19,6 +19,7 @@ namespace XMLWeather
 
         public void DisplayCurrent()
         {
+            //show important information on screen
             double currentTemp = Convert.ToDouble(Form1.days[0].currentTemp);
             double temp = Math.Round(currentTemp);
 
@@ -35,6 +36,7 @@ namespace XMLWeather
             contitionLabel.Text = Form1.days[0].condition;
             dateLabel.Text = DateTime.Now.DayOfWeek.ToString();
 
+            //get images
             weatherIconBox.ImageLocation = $"http://openweathermap.org/img/wn/{Form1.days[0].icon}@2x.png";
 
             BackgroundImage = Form1.days[0].bgImage;
@@ -42,6 +44,7 @@ namespace XMLWeather
 
         private void forecastLabel_Click(object sender, EventArgs e)
         {
+            //change to forecast screen
             Form f = this.FindForm();
             f.Controls.Remove(this);
 
@@ -51,6 +54,7 @@ namespace XMLWeather
 
         private void searchLabel_Click(object sender, EventArgs e)
         {
+            //change to search screen
             Form f = this.FindForm();
             f.Controls.Remove(this);
 

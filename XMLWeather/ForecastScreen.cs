@@ -19,8 +19,10 @@ namespace XMLWeather
 
         public void displayForecast()
         {
+            //set background image of screen
             BackgroundImage = Form1.days[0].bgImage;
 
+            //display information for each day to the screen
             max1.Parent = min1.Parent = icon1.Parent = date1.Parent = backLabel1;
             backLabel1.Image = Form1.days[1].bgImage;
             date1.Text = DateTime.Now.AddDays(1).DayOfWeek.ToString();
@@ -69,6 +71,7 @@ namespace XMLWeather
 
         private void label3_Click(object sender, EventArgs e)
         {
+            //return to Current Weather screen
             Form f = this.FindForm();
             f.Controls.Remove(this);
 
@@ -78,6 +81,7 @@ namespace XMLWeather
 
         private void searchLabel_Click(object sender, EventArgs e)
         {
+            //go to search screen
             Form f = this.FindForm();
             f.Controls.Remove(this);
 

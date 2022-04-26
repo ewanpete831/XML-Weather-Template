@@ -32,12 +32,13 @@ namespace XMLWeather
 
         public static void ExtractForecast()
         {
+            //get weather data
             days.Clear();
             XmlReader reader = XmlReader.Create($"http://api.openweathermap.org/data/2.5/forecast/daily?q={location}&mode=xml&units=metric&cnt=7&appid=3f2e224b815c0ed45524322e145149f0");
 
             while (reader.Read())
             {
-
+                //main forcast data
                 Day newDay = new Day();
 
                 reader.ReadToFollowing("time");
@@ -73,7 +74,7 @@ namespace XMLWeather
             days[0].icon = reader.GetAttribute("icon");
         }
 
-        public static void GetConditions()
+        public static void GetConditions() // use the weather condition codes to simplify descriptions, set correct icons
         {
             foreach(Day d in days)
             {
